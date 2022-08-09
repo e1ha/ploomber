@@ -163,11 +163,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
-        console.log("completer widget has appeared");
 
         // moves entries downwards
       if (e.key == "Tab") {
-        console.log("down");
         ul.children[currActiveOption].classList.remove("jp-mod-active");
         if (currActiveOption < ul.children.length-1){
           currActiveOption += 1;
